@@ -1,4 +1,5 @@
 import { createGlobalStyle } from "styled-components";
+import { theme } from "./theme";
 
 export const GlobalStyle = createGlobalStyle`
   html {
@@ -21,5 +22,17 @@ export const GlobalStyle = createGlobalStyle`
   a, a:visited {
     color: none;
     text-decoration: none;
+  }
+
+  p {
+    line-height: 150%;
+  }
+
+  h1 {
+    font-size: 5rem;
+
+    ${theme.media.medium} {
+      font-size: 3rem;
+    }
   }
 `;
