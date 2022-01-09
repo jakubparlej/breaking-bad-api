@@ -1,7 +1,7 @@
 import React from "react";
 import logo from "../../../assets/images/logo.svg";
 import searchIcon from "../../../assets/icons/search-icon.svg";
-import { Wrapper, Logo, List, SearchIcon } from "./Navbar.styles";
+import { Wrapper, Logo, List, Li, SearchIcon } from "./Navbar.styles";
 import { Link } from "react-router-dom";
 
 const Navbar = () => {
@@ -13,12 +13,12 @@ const Navbar = () => {
         </Link>
       </Logo>
       <List>
-        <Link end="true" to="/">
+        <Li end="true" to="/">
           Home
-        </Link>
-        <Link to="/characters">Characters</Link>
-        <li>Seasons</li>
-        <li>Episodes</li>
+        </Li>
+        <Li to="/characters">Characters</Li>
+        <Li to="/seasons">Seasons</Li>
+        <Li to="/episodes">Episodes</Li>
       </List>
       <SearchIcon>
         <img src={searchIcon} alt="" />

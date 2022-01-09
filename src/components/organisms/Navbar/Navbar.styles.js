@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { theme } from "../../../assets/styles/theme";
+import { Link } from "react-router-dom";
 
 export const Wrapper = styled.nav`
   padding: 2rem 0;
@@ -26,10 +27,15 @@ export const List = styled.ul`
   ${theme.media.medium} {
     display: none;
   }
+`;
 
-  li {
-    font-size: 1.25rem;
-    cursor: pointer;
+export const Li = styled(Link)`
+  font-size: 1.25rem;
+  color: ${theme.color.white};
+  transition: color 0.2s ease;
+
+  &:hover {
+    color: ${theme.color.lightGreen};
   }
 `;
 
