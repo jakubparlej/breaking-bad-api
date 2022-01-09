@@ -5,7 +5,7 @@ import Header from "../components/organisms/Header/Header";
 const Characters = () => {
   return (
     <>
-      <Header />
+      <Header title="Characters" />
       <CharactersGrid />
     </>
   );

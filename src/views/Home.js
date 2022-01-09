@@ -5,7 +5,7 @@ import Header from "../components/organisms/Header/Header";
 const Home = () => {
   return (
     <>
-      <Header />
+      <Header title="Breaking Bad" genres={true} desc={true} />
       <CharactersSection />
     </>
   );
