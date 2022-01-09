@@ -24,7 +24,7 @@ export const Wrapper = styled.div`
   }
 `;
 
-export const Loading = styled.div`
+export const Spinner = styled.div`
   position: absolute;
   top: 0;
   left: 0;

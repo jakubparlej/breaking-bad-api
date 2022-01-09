@@ -1,10 +1,11 @@
 import styled from "styled-components";
-import { theme } from "../../../assets/styles/theme";
+import { Link } from "react-router-dom";
 
-export const Card = styled.div`
+export const Card = styled(Link)`
   display: flex;
   flex-direction: column;
   cursor: pointer;
+  color: white;
 `;
 
 export const CardImg = styled.div`

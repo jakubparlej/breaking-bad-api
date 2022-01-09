@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import CharacterCard from "../../atoms/CharacterCard/CharacterCard";
 import { CharactersContext } from "../../providers/CharactersProvider";
-import { Wrapper, Loading } from "./CharactersGrid.styles";
+import { Wrapper, Spinner } from "./CharactersGrid.styles";
 import spinner from "../../../assets/images/spinner.gif";
 
 const CharactersGrid = ({ number }) => {
@@ -10,9 +10,9 @@ const CharactersGrid = ({ number }) => {
   const items = characters.slice(0, number);
 
   return isLoading ? (
-    <Loading>
+    <Spinner>
       <img src={spinner} alt="" />
-    </Loading>
+    </Spinner>
   ) : (
     <Wrapper>
       {items.map((item) => {

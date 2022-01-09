@@ -3,7 +3,7 @@ import { Card, CardImg, Name } from "./CharacterCard.styles";
 
 const CharacterCard = ({ id, name, img }) => {
   return (
-    <Card>
+    <Card to={"/" + id}>
       <CardImg id={id}>
         <img src={img} alt={name} />
       </CardImg>
