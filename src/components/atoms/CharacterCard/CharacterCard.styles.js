@@ -1,11 +1,18 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
+import theme from "../../../assets/styles/theme";
 
-export const Card = styled(Link)`
-  display: flex;
-  flex-direction: column;
-  cursor: pointer;
-  color: white;
+export const Name = styled.p`
+  font-size: 1.5rem;
+  margin-top: 1rem;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  padding: 10rem 1rem 1rem 1rem;
+  background: linear-gradient(transparent, #041704);
+  opacity: 0;
+  transition: opacity 0.2s ease;
 `;
 
 export const CardImg = styled.div`
@@ -19,14 +26,23 @@ export const CardImg = styled.div`
     height: 100%;
     object-fit: cover;
     transition: transform 0.3s ease;
-
-    &:hover {
-      transform: scale(105%);
-    }
   }
 `;
 
-export const Name = styled.p`
-  font-size: 1.25rem;
-  margin-top: 1rem;
+export const Card = styled(Link)`
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  color: white;
+  position: relative;
+
+  &:hover ${Name} {
+    opacity: 1;
+  }
+
+  &:hover ${CardImg} {
+    img {
+      transform: scale(105%);
+    }
+  }
 `;
