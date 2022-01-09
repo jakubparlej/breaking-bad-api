@@ -1,9 +1,8 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
-import theme from "../../../assets/styles/theme";
 
 export const Name = styled.p`
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   margin-top: 1rem;
   position: absolute;
   width: 100%;
@@ -13,6 +12,7 @@ export const Name = styled.p`
   background: linear-gradient(transparent, #041704);
   opacity: 0;
   transition: opacity 0.2s ease;
+  font-family: "Corben";
 `;
 
 export const CardImg = styled.div`

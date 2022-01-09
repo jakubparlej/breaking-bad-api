@@ -38,10 +38,10 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   h2 {
-    font-size: 2rem;
+    font-size: 3rem;
 
     ${theme.media.medium} {
-      font-size: 1.5rem;
+      font-size: 2rem;
     }
   }
 `;
