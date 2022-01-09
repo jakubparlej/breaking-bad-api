@@ -1,8 +1,8 @@
 import React from "react";
 import CharactersGrid from "../../molecules/CharactersGrid/CharactersGrid";
-import { Wrapper, Header } from "./Characters.styles";
+import { Wrapper, Header } from "./CharactersSection.styles";
 
-const Characters = () => {
+const CharactersSection = () => {
   return (
     <Wrapper>
       <Header>
@@ -14,4 +14,4 @@ const Characters = () => {
   );
 };
 
-export default Characters;
+export default CharactersSection;

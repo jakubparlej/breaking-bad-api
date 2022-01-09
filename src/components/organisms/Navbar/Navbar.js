@@ -2,6 +2,7 @@ import React from "react";
 import logo from "../../../assets/images/logo.svg";
 import searchIcon from "../../../assets/icons/search-icon.svg";
 import { Wrapper, Logo, List, SearchIcon } from "./Navbar.styles";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
@@ -10,7 +11,10 @@ const Navbar = () => {
         <img src={logo} alt="Breaking Bad Logo" />
       </Logo>
       <List>
-        <li>Characters</li>
+        <Link end to="/">
+          Home
+        </Link>
+        <Link to="/characters">Characters</Link>
         <li>Seasons</li>
         <li>Episodes</li>
       </List>

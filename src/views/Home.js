@@ -1,13 +1,13 @@
 import React from "react";
-import Characters from "../components/organisms/Characters/Characters";
+import CharactersSection from "../components/organisms/Characters/CharactersSection";
 import Header from "../components/organisms/Header/Header";
 
 const Home = () => {
   return (
-    <div>
+    <>
       <Header />
-      <Characters />
-    </div>
+      <CharactersSection />
+    </>
   );
 };
 
