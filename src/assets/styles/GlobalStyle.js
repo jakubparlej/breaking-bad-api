@@ -14,7 +14,8 @@ export const GlobalStyle = createGlobalStyle`
   }
   body {
     font-family: "Roboto", sans-serif;
-    background: ${({ theme }) => theme.color.black};
+    background: ${theme.color.black};
+    color: ${theme.color.white};
   }
   a, button {
     font-family: 'Roboto', sans-serif;
@@ -33,6 +34,14 @@ export const GlobalStyle = createGlobalStyle`
 
     ${theme.media.medium} {
       font-size: 3rem;
+    }
+  }
+
+  h2 {
+    font-size: 2rem;
+
+    ${theme.media.medium} {
+      font-size: 1.5rem;
     }
   }
 `;
