@@ -6,12 +6,13 @@ import { theme } from "../assets/styles/theme";
 import Home from "./Home";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Characters from "./Characters";
-import { CharactersContext } from "../components/providers/CharactersProvider";
+import { DataContext } from "../components/providers/DataProvider";
 import LoadingScreen from "../components/atoms/LoadingScreen/LoadingScreen";
 import Character from "./Character";
+import ScrollToTop from "../components/helpers/ScrollToTop";
 
 const Root = () => {
-  const { characters, isLoading } = useContext(CharactersContext);
+  const { characters, isLoading } = useContext(DataContext);
 
   const items = characters;
 
@@ -20,6 +21,7 @@ const Root = () => {
   ) : (
     <Router>
       <ThemeProvider theme={theme}>
+        <ScrollToTop />
         <GlobalStyle />
         <MainTemplate>
           <Routes>

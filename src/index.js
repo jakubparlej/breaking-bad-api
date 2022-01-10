@@ -1,13 +1,13 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import CharactersProvider from "./components/providers/CharactersProvider";
+import DataProvider from "./components/providers/DataProvider";
 import Root from "./views/Root";
 
 ReactDOM.render(
   <React.StrictMode>
-    <CharactersProvider>
+    <DataProvider>
       <Root />
-    </CharactersProvider>
+    </DataProvider>
   </React.StrictMode>,
   document.getElementById("root")
 );

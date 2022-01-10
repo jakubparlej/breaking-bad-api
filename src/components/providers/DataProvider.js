@@ -3,12 +3,12 @@ import axios from "axios";
 
 const baseURL = "https://www.breakingbadapi.com/api/";
 
-export const CharactersContext = React.createContext({
+export const DataContext = React.createContext({
   characters: [],
   isLoading: () => {},
 });
 
-const CharactersProvider = ({ children }) => {
+const DataProvider = ({ children }) => {
   const [characters, setCharacters] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
 
@@ -24,15 +24,15 @@ const CharactersProvider = ({ children }) => {
   }, []);
 
   return (
-    <CharactersContext.Provider
+    <DataContext.Provider
       value={{
         characters,
         isLoading,
       }}
     >
       {children}
-    </CharactersContext.Provider>
+    </DataContext.Provider>
   );
 };
 
-export default CharactersProvider;
+export default DataProvider;

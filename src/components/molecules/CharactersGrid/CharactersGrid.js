@@ -1,10 +1,10 @@
 import React, { useContext } from "react";
 import CharacterCard from "../../atoms/CharacterCard/CharacterCard";
-import { CharactersContext } from "../../providers/CharactersProvider";
+import { DataContext } from "../../providers/DataProvider";
 import { Wrapper } from "./CharactersGrid.styles";
 
 const CharactersGrid = ({ number }) => {
-  const { characters } = useContext(CharactersContext);
+  const { characters } = useContext(DataContext);
 
   const items = characters.slice(0, number);
 
