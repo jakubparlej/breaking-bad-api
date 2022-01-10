@@ -8,6 +8,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Characters from "./Characters";
 import { CharactersContext } from "../components/providers/CharactersProvider";
 import LoadingScreen from "../components/atoms/LoadingScreen/LoadingScreen";
+import Character from "./Character";
 
 const Root = () => {
   const { characters, isLoading } = useContext(CharactersContext);
@@ -29,7 +30,7 @@ const Root = () => {
                 <Route
                   key={item.char_id}
                   path={"/" + item.char_id}
-                  element={<h1>{item.name}</h1>}
+                  element={<Character char={item} />}
                 />
               );
             })}
