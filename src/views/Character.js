@@ -30,7 +30,7 @@ const Character = ({ char }) => {
         </Table>
         <>
           <h2>See also</h2>
-          <CharactersGrid number="6" />
+          <CharactersGrid number="5" />
         </>
       </Info>
     </Wrapper>
