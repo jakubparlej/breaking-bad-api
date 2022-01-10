@@ -5,11 +5,13 @@ const baseURL = "https://www.breakingbadapi.com/api/";
 
 export const DataContext = React.createContext({
   characters: [],
+  episodes: [],
   isLoading: () => {},
 });
 
 const DataProvider = ({ children }) => {
   const [characters, setCharacters] = useState([]);
+  const [episodes, setEpisodes] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
@@ -23,10 +25,22 @@ const DataProvider = ({ children }) => {
     fetchItems();
   }, []);
 
+  useEffect(() => {
+    const fetchItems = async () => {
+      const result = await axios(`${baseURL}episodes`);
+
+      setEpisodes(result.data);
+      setIsLoading(false);
+    };
+
+    fetchItems();
+  }, []);
+
   return (
     <DataContext.Provider
       value={{
         characters,
+        episodes,
         isLoading,
       }}
     >
