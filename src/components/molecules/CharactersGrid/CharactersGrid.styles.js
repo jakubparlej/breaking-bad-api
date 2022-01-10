@@ -5,8 +5,7 @@ export const Wrapper = styled.div`
   width: 100%;
   display: grid;
   grid-template-columns: repeat(6, 1fr);
-  grid-gap: 1.25rem;
-  row-gap: 4rem;
+  gap: 2rem;
 
   ${theme.media.xlarge} {
     grid-template-columns: repeat(5, 1fr);
