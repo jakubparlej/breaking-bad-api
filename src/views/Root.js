@@ -7,8 +7,7 @@ import Home from "./Home";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Characters from "./Characters";
 import { CharactersContext } from "../components/providers/CharactersProvider";
-import spinner from "../assets/images/spinner.gif";
-import { Spinner } from "../components/molecules/CharactersGrid/CharactersGrid.styles";
+import LoadingScreen from "../components/atoms/LoadingScreen/LoadingScreen";
 
 const Root = () => {
   const { characters, isLoading } = useContext(CharactersContext);
@@ -16,9 +15,7 @@ const Root = () => {
   const items = characters;
 
   return isLoading ? (
-    <Spinner>
-      <img src={spinner} alt="" />
-    </Spinner>
+    <LoadingScreen />
   ) : (
     <Router>
       <ThemeProvider theme={theme}>

@@ -24,21 +24,3 @@ export const Wrapper = styled.div`
     grid-template-columns: repeat(2, 1fr);
   }
 `;
-
-export const Spinner = styled.div`
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  background: ${theme.color.black};
-  width: 100%;
-  height: 100%;
-  z-index: 99;
-  display: grid;
-  place-content: center;
-
-  img {
-    width: 50px;
-  }
-`;

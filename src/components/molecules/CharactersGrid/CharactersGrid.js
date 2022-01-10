@@ -1,19 +1,14 @@
 import React, { useContext } from "react";
 import CharacterCard from "../../atoms/CharacterCard/CharacterCard";
 import { CharactersContext } from "../../providers/CharactersProvider";
-import { Wrapper, Spinner } from "./CharactersGrid.styles";
-import spinner from "../../../assets/images/spinner.gif";
+import { Wrapper } from "./CharactersGrid.styles";
 
 const CharactersGrid = ({ number }) => {
-  const { characters, isLoading } = useContext(CharactersContext);
+  const { characters } = useContext(CharactersContext);
 
   const items = characters.slice(0, number);
 
-  return isLoading ? (
-    <Spinner>
-      <img src={spinner} alt="" />
-    </Spinner>
-  ) : (
+  return (
     <Wrapper>
       {items.map((item) => {
         return (
