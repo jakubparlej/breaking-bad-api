@@ -4,7 +4,7 @@ import { StyledLink } from "./Button.styles";
 
 const Button = ({ title, link }) => {
   return (
-    <StyledLink to="/characters">
+    <StyledLink to={link}>
       <div>{title}</div>
       <img src={arrowRight} alt="" />
     </StyledLink>

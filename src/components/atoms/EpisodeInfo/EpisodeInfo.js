@@ -21,6 +21,11 @@ const Row = styled.li`
   row-gap: 1rem;
   border-radius: 3px;
 
+  ${theme.media.medium} {
+    font-size: 1rem;
+    grid-template-columns: 30px 60% 30% 1fr;
+  }
+
   :hover {
     background: rgba(255, 255, 255, 0.1);
 

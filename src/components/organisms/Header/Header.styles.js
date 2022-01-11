@@ -18,7 +18,7 @@ export const Content = styled.div`
   display: flex;
   flex-direction: column;
   color: ${theme.color.white};
-  padding: 21rem 0 11rem 0;
+  padding: 15rem 0 10rem 0;
   /* max-width: 38rem; */
   max-width: 50%;
 

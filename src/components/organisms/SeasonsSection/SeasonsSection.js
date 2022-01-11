@@ -8,7 +8,7 @@ const SeasonsSection = () => {
     <Wrapper>
       <Header>
         <h2>Episodes</h2>
-        <Button title="All episodes" />
+        <Button title="All episodes" link="/episodes" />
       </Header>
       <SeasonsGrid />
     </Wrapper>

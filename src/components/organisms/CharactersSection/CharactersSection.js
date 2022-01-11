@@ -8,7 +8,7 @@ const CharactersSection = () => {
     <Wrapper>
       <Header>
         <h2>Characters</h2>
-        <Button title="All characters" />
+        <Button title="All characters" link="/characters" />
       </Header>
       <CharactersGrid number="6" />
     </Wrapper>

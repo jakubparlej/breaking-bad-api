@@ -1,4 +1,5 @@
 import React from "react";
+import Footer from "../organisms/Footer/Footer";
 import Navbar from "../organisms/Navbar/Navbar";
 import { Wrapper } from "./MainTemplate.styles";
 
@@ -7,6 +8,7 @@ const MainTemplate = ({ children }) => {
     <Wrapper>
       <Navbar />
       {children}
+      <Footer />
     </Wrapper>
   );
 };

@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { theme } from "../../../assets/styles/theme";
+import { Link } from "react-router-dom";
 
 export const Season = styled.p`
   font-size: 1.6rem;
@@ -20,7 +21,7 @@ export const CardImg = styled.div`
   }
 `;
 
-export const Card = styled.div`
+export const Card = styled(Link)`
   display: flex;
   flex-direction: column;
   cursor: pointer;
