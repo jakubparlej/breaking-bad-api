@@ -10,6 +10,7 @@ import { DataContext } from "../components/providers/DataProvider";
 import LoadingScreen from "../components/atoms/LoadingScreen/LoadingScreen";
 import Character from "./Character";
 import ScrollToTop from "../components/helpers/ScrollToTop";
+import Episodes from "./Episodes";
 
 const Root = () => {
   const { characters, isLoading } = useContext(DataContext);
@@ -25,8 +26,9 @@ const Root = () => {
         <GlobalStyle />
         <MainTemplate>
           <Routes>
-            <Route path="/characters" element={<Characters />} />
             <Route path="/" element={<Home />} />
+            <Route path="/characters" element={<Characters />} />
+            <Route path="/episodes" element={<Episodes />} />
             {items.map((item) => {
               return (
                 <Route

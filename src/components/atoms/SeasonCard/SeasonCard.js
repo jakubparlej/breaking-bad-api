@@ -1,15 +1,24 @@
-import React from "react";
+import React, { useContext } from "react";
+import { DataContext } from "../../providers/DataProvider";
 import { Card, CardImg, Season, Episodes } from "./SeasonCard.styles";
 
-const SeasonCard = ({ img, episodes }) => {
+const SeasonCard = ({ id, img, name, episodesNum }) => {
+  const { setActualSeason } = useContext(DataContext);
+
+  const click = () => {
+    setActualSeason(id);
+  };
+
   return (
-    <Card>
-      <CardImg>
-        <img src={img} alt="" />
-      </CardImg>
-      <Season>Season 1</Season>
-      <Episodes>{episodes} Episodes</Episodes>
-    </Card>
+    <>
+      <Card onClick={click}>
+        <CardImg>
+          <img src={img} alt="" />
+        </CardImg>
+        <Season>{name}</Season>
+        <Episodes>{episodesNum} Episodes</Episodes>
+      </Card>
+    </>
   );
 };
 

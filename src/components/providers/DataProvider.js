@@ -1,17 +1,22 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import { seasonsData } from "./data";
 
 const baseURL = "https://www.breakingbadapi.com/api/";
 
 export const DataContext = React.createContext({
   characters: [],
   episodes: [],
+  seasons: [],
+  actualSeason: "",
   isLoading: () => {},
 });
 
 const DataProvider = ({ children }) => {
   const [characters, setCharacters] = useState([]);
   const [episodes, setEpisodes] = useState([]);
+  const [seasons, setSeasons] = useState([]);
+  const [actualSeason, setActualSeason] = useState("");
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
@@ -20,6 +25,8 @@ const DataProvider = ({ children }) => {
 
       setCharacters(result.data);
       setIsLoading(false);
+      setSeasons(seasonsData);
+      setActualSeason("1");
     };
 
     fetchItems();
@@ -41,6 +48,9 @@ const DataProvider = ({ children }) => {
       value={{
         characters,
         episodes,
+        seasons,
+        actualSeason,
+        setActualSeason,
         isLoading,
       }}
     >

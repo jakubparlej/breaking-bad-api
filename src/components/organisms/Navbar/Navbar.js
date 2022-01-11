@@ -17,7 +17,6 @@ const Navbar = () => {
           Home
         </Li>
         <Li to="/characters">Characters</Li>
-        <Li to="/seasons">Seasons</Li>
         <Li to="/episodes">Episodes</Li>
       </List>
       <SearchIcon>
