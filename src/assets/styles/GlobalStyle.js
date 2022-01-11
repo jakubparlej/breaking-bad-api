@@ -1,5 +1,6 @@
 import { createGlobalStyle } from "styled-components";
 import { theme } from "./theme";
+import background from "../images/radialbg.svg";
 
 export const GlobalStyle = createGlobalStyle`
   html {
@@ -15,6 +16,10 @@ export const GlobalStyle = createGlobalStyle`
   body {
     font-family: "Roboto", sans-serif;
     background: ${theme.color.black};
+    background-image: url(${background});
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center top;
     color: ${theme.color.white};
   }
   a, button {

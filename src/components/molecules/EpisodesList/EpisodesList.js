@@ -3,6 +3,27 @@ import { useContext } from "react/cjs/react.development";
 import styled from "styled-components";
 import EpisodeInfo from "../../atoms/EpisodeInfo/EpisodeInfo";
 import { DataContext } from "../../providers/DataProvider";
+import { theme } from "../../../assets/styles/theme";
+
+const Title = styled.h2`
+  font-size: 2rem;
+  margin-bottom: 2rem;
+`;
+const Header = styled.div`
+  width: 100%;
+  display: grid;
+  padding: 1rem;
+  grid-template-columns: 50px 50% 20% 1fr;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
+  div {
+    color: rgba(255, 255, 255, 0.5);
+  }
+
+  div:last-of-type {
+    text-align: right;
+  }
+`;
 
 const Wrapper = styled.ul`
   display: flex;
@@ -12,7 +33,7 @@ const Wrapper = styled.ul`
 `;
 
 const EpisodesList = () => {
-  const { episodes, seasons, actualSeason } = useContext(DataContext);
+  const { episodes, actualSeason } = useContext(DataContext);
 
   let episodesList = [];
 
@@ -41,16 +62,20 @@ const EpisodesList = () => {
 
   setSeason();
 
-  console.log(actualSeason);
-
   return (
     <Wrapper>
-      <h2>Episodes list</h2>
+      <Title>Episodes list</Title>
+      <Header>
+        <div>#</div>
+        <div>Title</div>
+        <div>Air date</div>
+        <div>Link</div>
+      </Header>
       {episodesList.map((episode) => {
         return (
           <EpisodeInfo
             key={episode.id}
-            id={episode.id}
+            id={episode.episode}
             title={episode.title}
             airDate={episode.air_date}
           />
