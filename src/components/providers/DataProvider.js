@@ -16,7 +16,7 @@ const DataProvider = ({ children }) => {
   const [characters, setCharacters] = useState([]);
   const [episodes, setEpisodes] = useState([]);
   const [seasons, setSeasons] = useState([]);
-  const [actualSeason, setActualSeason] = useState("");
+  const [actualSeason, setActualSeason] = useState("1");
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
