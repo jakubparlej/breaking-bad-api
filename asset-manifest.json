@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.js": "/breaking-bad-api/static/js/main.c77cca53.js",
+    "main.js": "/breaking-bad-api/static/js/main.b468a4d6.js",
     "static/media/loading.gif": "/breaking-bad-api/static/media/loading.cfc783bb75f37d7f61cd.gif",
     "static/media/background1.jpg": "/breaking-bad-api/static/media/background1.06a1dcb8f01fc882c6b1.jpg",
     "static/media/season2.jpg": "/breaking-bad-api/static/media/season2.d58c1fd0f89de5eb575f.jpg",
@@ -12,9 +12,9 @@
     "static/media/arrow-right.svg": "/breaking-bad-api/static/media/arrow-right.049bcbe652f1d9df3a0f0380836b9882.svg",
     "index.html": "/breaking-bad-api/index.html",
     "static/media/search-icon.svg": "/breaking-bad-api/static/media/search-icon.4a6be03f8a66f4d118e87c93cabb273a.svg",
-    "main.c77cca53.js.map": "/breaking-bad-api/static/js/main.c77cca53.js.map"
+    "main.b468a4d6.js.map": "/breaking-bad-api/static/js/main.b468a4d6.js.map"
   },
   "entrypoints": [
-    "static/js/main.c77cca53.js"
+    "static/js/main.b468a4d6.js"
   ]
 }
