@@ -8,14 +8,12 @@ const Navbar = () => {
   return (
     <Wrapper>
       <Logo>
-        <Link to="/">
+        <Link to="/breaking-bad-api">
           <img src={logo} alt="Breaking Bad Logo" />
         </Link>
       </Logo>
       <List>
-        <Li end="true" to="/">
-          Home
-        </Li>
+        <Li to="/breaking-bad-api">Home</Li>
         <Li to="/characters">Characters</Li>
         <Li to="/episodes">Episodes</Li>
       </List>

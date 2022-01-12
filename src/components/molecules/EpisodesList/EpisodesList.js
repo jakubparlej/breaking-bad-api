@@ -78,7 +78,7 @@ const EpisodesList = () => {
       {episodesList.map((episode) => {
         return (
           <EpisodeInfo
-            key={episode.id}
+            key={episode.episode}
             id={episode.episode}
             title={episode.title}
             airDate={episode.air_date}
