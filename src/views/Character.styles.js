@@ -103,5 +103,6 @@ export const Quote = styled.div`
   p {
     font-family: "Corben";
     color: ${theme.color.lightGreen};
+    font-size: 1.5rem;
   }
 `;

@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { theme } from "../../../assets/styles/theme";
-import { Link } from "react-router-dom";
+import { HashLink as Link } from "react-router-hash-link";
 
 export const Season = styled.p`
   font-size: 1.6rem;

@@ -1,39 +1,7 @@
 import React, { useContext } from "react";
-import styled from "styled-components";
 import EpisodeInfo from "../../atoms/EpisodeInfo/EpisodeInfo";
 import { DataContext } from "../../providers/DataProvider";
-import { theme } from "../../../assets/styles/theme";
-
-const Title = styled.h2`
-  font-size: 2rem;
-  margin-bottom: 2rem;
-`;
-const Header = styled.div`
-  width: 100%;
-  display: grid;
-  padding: 1rem;
-  grid-template-columns: 50px 50% 20% 1fr;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-
-  ${theme.media.medium} {
-    grid-template-columns: 30px 60% 30% 1fr;
-  }
-
-  div {
-    color: rgba(255, 255, 255, 0.5);
-  }
-
-  div:last-of-type {
-    text-align: right;
-  }
-`;
-
-const Wrapper = styled.ul`
-  display: flex;
-  flex-direction: column;
-  list-style: none;
-  margin: 4rem 0;
-`;
+import { Header, Title, Wrapper } from "./EpisodesList.styles";
 
 const EpisodesList = () => {
   const { episodes, actualSeason } = useContext(DataContext);
@@ -66,7 +34,7 @@ const EpisodesList = () => {
   setSeason();
 
   return (
-    <Wrapper>
+    <Wrapper id="list">
       <Title>Episodes list</Title>
       <Header>
         <div>#</div>

@@ -20,8 +20,6 @@ const Character = ({ char }) => {
     return item.author.includes(`${char.name}`) ? charQuotes.push(item) : null;
   });
 
-  // console.log(charQuotes);
-
   return (
     <Wrapper>
       <Img>

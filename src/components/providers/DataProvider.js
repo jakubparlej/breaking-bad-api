@@ -54,7 +54,7 @@ const DataProvider = ({ children }) => {
     };
 
     fetchItems();
-  }, [characters]);
+  }, []);
 
   return (
     <DataContext.Provider

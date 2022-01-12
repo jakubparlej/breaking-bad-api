@@ -17,6 +17,11 @@ export const GlobalStyle = createGlobalStyle`
     background: ${theme.color.black};
     color: ${theme.color.white};
   }
+
+  img {
+    pointer-events: none;
+  }
+
   a, button {
     font-family: 'Roboto', sans-serif;
   }

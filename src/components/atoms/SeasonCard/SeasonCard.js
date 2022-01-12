@@ -11,7 +11,7 @@ const SeasonCard = ({ id, img, name, episodesNum }) => {
 
   return (
     <>
-      <Card onClick={click} to="/breaking-bad-api/episodes">
+      <Card onClick={click} to="/breaking-bad-api/episodes/#list">
         <CardImg>
           <img src={img} alt="" />
         </CardImg>

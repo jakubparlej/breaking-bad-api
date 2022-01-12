@@ -14,7 +14,6 @@ export const Wrapper = styled.div`
   ${theme.media.medium} {
     grid-template-columns: repeat(3, 1fr);
   }
-
   ${theme.media.small} {
     grid-template-columns: repeat(2, 1fr);
   }
