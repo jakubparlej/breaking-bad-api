@@ -10,6 +10,7 @@ export const DataContext = React.createContext({
   seasons: [],
   quotes: [],
   actualSeason: "",
+  menuActive: "",
   isLoading: () => {},
 });
 
@@ -19,6 +20,7 @@ const DataProvider = ({ children }) => {
   const [seasons, setSeasons] = useState([]);
   const [quotes, setQuotes] = useState([]);
   const [actualSeason, setActualSeason] = useState("1");
+  const [isMenuActive, setIsMenuActive] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
@@ -64,6 +66,8 @@ const DataProvider = ({ children }) => {
         seasons,
         quotes,
         actualSeason,
+        isMenuActive,
+        setIsMenuActive,
         setActualSeason,
         isLoading,
       }}

@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { theme } from "../../../assets/styles/theme";
 import { Link } from "react-router-dom";
+import { VscMenu, VscClose } from "react-icons/vsc";
 
 export const Wrapper = styled.nav`
   padding: 2rem 0;
@@ -52,5 +53,41 @@ export const SearchIcon = styled.button`
   img {
     width: 1.25rem;
     height: 1.25rem;
+  }
+`;
+
+export const Menu = styled.div`
+  position: absolute;
+  top: 5rem;
+  left: 2rem;
+  right: 2rem;
+  padding: 4rem 2rem;
+  background: ${theme.color.black};
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 5px;
+`;
+
+export const MenuItem = styled(Link)`
+  font-size: 2.5rem;
+  color: ${theme.color.white};
+  margin: 1rem 0;
+`;
+
+export const Open = styled(VscMenu)`
+  font-size: 2rem;
+  display: none;
+
+  ${theme.media.small} {
+    display: block;
+  }
+`;
+export const Close = styled(VscClose)`
+  display: none;
+  font-size: 2rem;
+
+  ${theme.media.small} {
+    display: block;
   }
 `;

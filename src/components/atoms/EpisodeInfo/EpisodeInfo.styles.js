@@ -24,7 +24,7 @@ export const Row = styled.a`
 
   ${theme.media.medium} {
     font-size: 1rem;
-    grid-template-columns: 30px 60% 30% 1fr;
+    grid-template-columns: 30px 50% 30% 1fr;
   }
 
   :hover {

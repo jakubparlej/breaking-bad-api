@@ -13,7 +13,7 @@ export const Header = styled.div`
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 
   ${theme.media.medium} {
-    grid-template-columns: 30px 60% 30% 1fr;
+    grid-template-columns: 30px 50% 30% 1fr;
   }
 
   div {
