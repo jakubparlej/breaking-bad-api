@@ -1,5 +1,4 @@
-import React from "react";
-import { useContext } from "react/cjs/react.development";
+import React, { useContext } from "react";
 import styled from "styled-components";
 import EpisodeInfo from "../../atoms/EpisodeInfo/EpisodeInfo";
 import { DataContext } from "../../providers/DataProvider";
