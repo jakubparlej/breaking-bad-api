@@ -20,6 +20,8 @@ const Character = ({ char }) => {
     return item.author.includes(`${char.name}`) ? charQuotes.push(item) : null;
   });
 
+  // console.log(charQuotes);
+
   return (
     <Wrapper>
       <Img>
@@ -28,11 +30,21 @@ const Character = ({ char }) => {
       <Info>
         <Nickname>{char.nickname}</Nickname>
         <h1>{char.name}</h1>
+
         <Quote>
-          <div>Random quote:</div>
-          <p>
-            {charQuotes[Math.floor(Math.random() * charQuotes.length)].quote}
-          </p>
+          {charQuotes.length > 0 ? (
+            <>
+              <div>Random quote:</div>
+              <p>
+                {
+                  charQuotes[Math.floor(Math.random() * charQuotes.length)]
+                    .quote
+                }
+              </p>
+            </>
+          ) : (
+            ""
+          )}
         </Quote>
 
         <Table>
