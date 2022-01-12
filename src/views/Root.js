@@ -27,14 +27,22 @@ const Root = () => {
         <MainTemplate>
           <Routes>
             <Route end path="/breaking-bad-api" element={<Home />} />
-            <Route end path="/characters" element={<Characters />} />
-            <Route end path="/episodes" element={<Episodes />} />
+            <Route
+              end
+              path="/breaking-bad-api/characters"
+              element={<Characters />}
+            />
+            <Route
+              end
+              path="/breaking-bad-api/episodes"
+              element={<Episodes />}
+            />
             {items.map((item) => {
               return (
                 <Route
                   end
                   key={item.char_id}
-                  path={"/" + item.char_id}
+                  path={"/breaking-bad-api/" + item.char_id}
                   element={<Character char={item} />}
                 />
               );

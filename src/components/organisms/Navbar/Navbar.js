@@ -14,8 +14,8 @@ const Navbar = () => {
       </Logo>
       <List>
         <Li to="/breaking-bad-api">Home</Li>
-        <Li to="/characters">Characters</Li>
-        <Li to="/episodes">Episodes</Li>
+        <Li to="/breaking-bad-api/characters">Characters</Li>
+        <Li to="/breaking-bad-api/episodes">Episodes</Li>
       </List>
       <SearchIcon>
         <img src={searchIcon} alt="" />
