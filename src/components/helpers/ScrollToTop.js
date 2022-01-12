@@ -5,7 +5,10 @@ const ScrollToTop = () => {
   const { pathname } = useLocation();
 
   useEffect(() => {
-    if (pathname !== "/characters" && pathname !== "/") {
+    if (
+      pathname !== "/breaking-bad-api/characters" &&
+      pathname !== "/breaking-bad-api"
+    ) {
       window.scrollTo(0, 0);
     }
   }, [pathname]);

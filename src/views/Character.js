@@ -1,4 +1,6 @@
-import React from "react";
+import React, { useContext } from "react";
+import { DataContext } from "../components/providers/DataProvider";
+
 import {
   Wrapper,
   Img,
@@ -10,6 +12,14 @@ import {
 } from "./Character.styles";
 
 const Character = ({ char }) => {
+  const { quotes } = useContext(DataContext);
+
+  let charQuotes = [];
+
+  quotes.map((item) => {
+    return item.author.includes(`${char.name}`) ? charQuotes.push(item) : null;
+  });
+
   return (
     <Wrapper>
       <Img>
@@ -21,10 +31,7 @@ const Character = ({ char }) => {
         <Quote>
           <div>Random quote:</div>
           <p>
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia
-            minima ut adipisci, nulla eaque ab tempora sint aspernatur corrupti
-            obcaecati dolorem nihil. Exercitationem sint, qui similique
-            obcaecati quae repellendus quos."
+            {charQuotes[Math.floor(Math.random() * charQuotes.length)].quote}
           </p>
         </Quote>
 
