@@ -21,6 +21,7 @@ This projects is created with React and it uses [Breaking Bad API](https://break
 Project is created with:
 
 - React
+- Styled components
 - [Breaking Bad API](https://breakingbadapi.com/)
 
 ## Features
